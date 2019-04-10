@@ -21,7 +21,7 @@ totaal_verbruik["Date"] = pd.to_datetime(totaal_verbruik["Date"])
 totaal_verbruik.index = totaal_verbruik["Date"]
 # delete datecolumn
 del totaal_verbruik["Date"]
-
+fffff
 
 ###
 test_database = pd.read_excel(r'C:\Projects\myfirstpie\TestDatabase.xlsx',sheet_name = 0,header = 0,parse_cols = "A,B") 
