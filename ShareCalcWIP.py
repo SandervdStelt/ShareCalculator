@@ -29,8 +29,9 @@ del test_database["Date"] # delete datecolumn
 
 
 # use concat to paste new dataset into old
-new_database = pd.concat([test_database, totaal_verbruik])
-new_database = test_database.merge(totaal_verbruik,how = 'left',right_index = True,left_index = True)
+#new_database = pd.concat([test_database, totaal_verbruik])
+#new_database = test_database.merge(totaal_verbruik,how = 'left',right_index = True,left_index = True)
+new_database = test_database.combine_first(totaal_verbruik)
 #new_database = new_database[~new_database.index.duplicated(keep = 'last')]
 print(new_database)
 # Store Excel file
